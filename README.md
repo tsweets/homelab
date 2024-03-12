@@ -27,9 +27,17 @@ Upstairs:
 
 Network Diagram  
 ![High Level Network Diagram](docs/images/network-highlevel.excalidraw.png)
+```
+Default             10.222.1.0/24   VLAN: 1
+Management          10.33.1.0/24    VLAN: 33
+Skyline Classic     10.220.1.0/24   VLAN: 220
+Cloud               10.1070.0/24    VLAN: 107
+InternetOfThings    192.168.40.0/24 VLAN: 40
+--------
+Need to Add
+PBI                 x.x.x.x/x       VLAN: x
+PBI SAN             x.x.x.x/x       VLAN: x   
+```
 
-- Default 1
-- Management 33
-- Skyline Classic 220
-- Cloud 107
-- InternetOfThings 40
+#### PBI Lab Domain
+This is production quality Software Development Environment. Described [PBI Lab](docs/lab-pbi/lab-pbi.md)
