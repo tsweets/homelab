@@ -74,3 +74,68 @@ Things I've own and have tried:
     - TrueNAS VM support seems a little goofy.
     - Like the Docker/K8S integration. For the most part.      
 
+PBI Lab Network Diagram
+----------------------------------------------------
+![PBI Lab Network Diagram](../images/pbi-lab-network-diagram.excalidraw.png)
+
+#### VLAN Information
+Lab Networks 
+
+|Network|IP|VLAN|
+|-------|-------|-------|
+|PBI Public| 10.150.0.0/24| VLAN: 150|
+|PBI SAN| 10.150.10.0/24| VLAN: 1150  
+
+
+#### Hardware IP Information
+
+|Hostname|Function|IP|
+|-------|-------|-------|
+|gw.pbi.skyline.lan|Default Gateway| 10.150.0.1|
+|nas-pbi.pbi.skyline.lan|Network Attached Storage| 10.150.0.5|
+|pve1.pbi.skyline.lan|Proxmox VM Host #1| 10.150.0.21|
+|pve2.pbi.skyline.lan|Proxmox VM Host #2| 10.150.0.22|
+|pve3.pbi.skyline.lan|Proxmox VM Host #3| 10.150.0.23|
+|pve1-ceph.pbi.skyline.lan|Ceph NIC1| 10.150.10.11|
+|pve2-ceph.pbi.skyline.lan|Ceph NIC2| 10.150.10.12|
+|pve3-ceph.pbi.skyline.lan|Ceph NIC3| 10.150.10.13|
+
+#### Infrastructure Service IP Information
+
+|Hostname|Function|IP|
+|-------|-------|-------|
+|proxy.skyline.lan|NGINX Proxy Manager| 10.150.0.50|
+|XXXX.skyline.lan|LDAP (GLAuth)| 10.150.0.51|
+|XXXX.skyline.lan|Local DNS| 10.150.0.XX|
+|XXXX.skyline.lan|ROOT CA| 10.150.0.XX|
+|XXXX.skyline.lan|K3S Node 1| 10.150.0.XX|
+|XXXX.skyline.lan|K3S Node 2| 10.150.0.XX|
+|XXXX.skyline.lan|K3S Node 3| 10.150.0.XX|
+|XXXX.skyline.lan|Docker Host| 10.150.0.XX|
+|XXXX.skyline.lan|Rancher| 10.150.0.XX|
+|XXXX.skyline.lan|Dashboard| 10.150.0.XX|
+|XXXX.skyline.lan|APT Mirror| 10.150.0.XX|
+|XXXX.skyline.lan|Code Server (Coder)| 10.150.0.XX|
+|XXXX.skyline.lan|Virtual Workstation| 10.150.0.XX|
+
+
+
+
+
+
+
+#### Application IP Information
+
+|Hostname|Function|IP|
+|-------|-------|-------|
+|XXXX.skyline.lan|Git Server | 10.150.0.XX|
+|XXXX.skyline.lan|Artifact Repo| 10.150.0.XX|
+|XXXX.skyline.lan|Container Registry| 10.150.0.XX|
+|XXXX.skyline.lan|Jenkins Master| 10.150.0.XX|
+|XXXX.skyline.lan|Jenkins Node 1| 10.150.0.XX|
+|XXXX.skyline.lan|Jenkins Node 2| 10.150.0.XX|
+|XXXX.skyline.lan|Test SQL Database| 10.150.0.XX|
+|XXXX.skyline.lan|Test MongoDB| 10.150.0.XX|
+|XXXX.skyline.lan|Test Mock Server (leaf/navara)| 10.150.0.XX|
+|XXXX.skyline.lan|Test File Transfer Server (SFTPGo)| 10.150.0.XX|
+
