@@ -26,6 +26,7 @@ The main goal is to rid myself of VMWare ESXi. I'm also strapped for memory. The
 - Highly Available
 - No data loss
 - Working SSL (Hate Cert Errors and everything seems to need ssl these days)
+- Get to Web UIs with standard ports https://jenkins.skyline.lan:9000 should just be https://jenkins.skyline.lan
 
 #### Direction Decided
 The new system will be built around a 3-Node Proxmox hyper converged cluster. The cluster will be built around 3 Dell Optiplex 7050 Micro business desktops. The micro version is a "1 liter" super small form factor. The Optiplex is equipped with an Intel i5-7500T processor. Here's how it compares with the old system
@@ -117,10 +118,14 @@ Lab Networks
 |XXXX.skyline.lan|APT Mirror| 10.150.0.XX|
 |XXXX.skyline.lan|Code Server (Coder)| 10.150.0.XX|
 |XXXX.skyline.lan|Virtual Workstation| 10.150.0.XX|
+|XXXX.skyline.lan|Password Management (BitWarden) | 10.150.0.XX|
 
 
 
 
+
+Applications Provided
+----------------------------------------------------
 
 
 
@@ -139,3 +144,7 @@ Lab Networks
 |XXXX.skyline.lan|Test Mock Server (leaf/navara)| 10.150.0.XX|
 |XXXX.skyline.lan|Test File Transfer Server (SFTPGo)| 10.150.0.XX|
 
+
+#### CI/CD Server (Jenkins)
+
+The SDE provides [Jenkins](https://www.jenkins.io) as the CI/CD solution. It will consist of a single master node and two workers. Click for [SDE Jenkins](app-jenkins.md) details.
