@@ -84,25 +84,31 @@ Lab Networks
 
 |Network|IP|VLAN|
 |-------|-------|-------|
-|PBI Public| 10.150.0.0/24| VLAN: 150|
-|PBI SAN| 10.150.10.0/24| VLAN: 1150  
+|PBI Public| 10.150.0.1/24| VLAN: 150|
+|PBI SAN| 10.150.10.1/24| VLAN: 1150  
+
+Public DHCP Range: 10.150.0.230-254
 
 
 #### Hardware IP Information
 
-|Hostname|Function|IP|
-|-------|-------|-------|
-|gw.pbi.skyline.lan|Default Gateway| 10.150.0.1|
+|Hostname|Function|IP|Network Port|
+|-------|-------|-------|-------|
+|gw.pbi.skyline.lan|Default Gateway| 10.150.0.1|Cloud 17|
 |nas-pbi.pbi.skyline.lan|Network Attached Storage| 10.150.0.5|
-|pve1.pbi.skyline.lan|Proxmox VM Host #1| 10.150.0.21|
+|NAS Actual (Temp)|Network Attached Storage| 10.220.1.14|
+|pve1.pbi.skyline.lan|Proxmox VM Host #1| 10.150.0.21|Cloud 21|
 |pve2.pbi.skyline.lan|Proxmox VM Host #2| 10.150.0.22|
 |pve3.pbi.skyline.lan|Proxmox VM Host #3| 10.150.0.23|
 |pve1-ceph.pbi.skyline.lan|Ceph NIC1| 10.150.10.11|
 |pve2-ceph.pbi.skyline.lan|Ceph NIC2| 10.150.10.12|
-|pve3-ceph.pbi.skyline.lan|Ceph NIC3| 10.150.10.13|
+|proxmox-backup.pbi.skyline.lan|Proxmox Backup Server(virt)| 10.220.1.22|
+
+#### NAS Shares
+- ISO (ISO Images)
+- PROXMOX-BACKUP (VM/DATA Backups)
 
 #### Infrastructure Service IP Information
-
 |Hostname|Function|IP|
 |-------|-------|-------|
 |proxy.skyline.lan|NGINX Proxy Manager| 10.150.0.50|

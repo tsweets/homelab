@@ -35,8 +35,8 @@ Cloud                   10.107.0.0/24   VLAN: 107
 InternetOfThings        192.168.40.0/24 VLAN: 40
 --------
 Need to Add
-PBI (v-cluster)         10.50.0.0/24       VLAN: 50
-PBI SAN (v-cluser SAN)  10.50.10.0/x       VLAN: 55   
+PBI (v-cluster)         10.150.0.0/24   VLAN: 150
+PBI SAN (v-cluster SAN) 10.150.10.0/24  VLAN: 1150   
 ```
 
 #### PBI Lab Domain
