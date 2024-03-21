@@ -1,4 +1,5 @@
-Docker Host ====================================================
+Docker Host 
+====================================================
 ``` 
 Hostname: docker.pbi.skyline.lan   
 IP: xxx.xxx.xxx.xxx 
@@ -12,14 +13,16 @@ Dependencies
 ----------------------------------------------------
 - VM to Run Docker
 - Ansible
-- Debian 12 Server 
+- Ubuntu 23.10 Server
+- DNS Entry
+- APT Mirror 
 
 Design
 ----------------------------------------------------
 The docker host will need the following installed:
 - docker
 - docker compose
-- portainer
+- Portainer
 
 #### VM
 Debian will be the base OS. This VM will alot of resources. 
