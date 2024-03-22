@@ -1,8 +1,8 @@
 dns
 ====================================================
 ``` 
-Hostname: dns1.pbi.skyline.lan   
-IP: xxx.xxx.xxx.xxx 
+Hostname: ns1.pbi.skyline.lan   
+IP: 10.150.0.2 
 ```
 
 Overview

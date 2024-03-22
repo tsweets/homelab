@@ -111,6 +111,7 @@ Public DHCP Range: 10.150.0.230-254
 #### Infrastructure Service IP Information
 |Hostname|Function|IP|
 |-------|-------|-------|
+|ns1.skyline.lan|DNS Server 1| 10.150.0.2|
 |proxy.skyline.lan|NGINX Proxy Manager| 10.150.0.50|
 |XXXX.skyline.lan|LDAP (GLAuth)| 10.150.0.51|
 |XXXX.skyline.lan|Local DNS| 10.150.0.XX|
