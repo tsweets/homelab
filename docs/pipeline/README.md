@@ -25,3 +25,15 @@ Notes/Ideas:
 - Need a "Cluster Manager" The CM acts as a semaphore for available cluster resources. Takes commands to spin up/down clusters, show status. Typically this is something like AWS
 - Need a Dashboard to the see the entire system build status as a whole, when too many services are being built, hard to keep track of whats failing
 - Version Numbers for artifacts inside containers (ie Jars). Seeing commit ID being used version = <DATESTRING>-<TIMESTAMP>-<BUILDNUMBER>-<COMMIT-ID>
+
+##### Possible Tools to look at
+- Harbor
+- ttl.sh 
+- ArgoCD
+- Artifactory (Free)
+- Dagger
+- Selenium
+- Kustomize
+- Terraform
+    - Kubernetes
+    - Artifactory
