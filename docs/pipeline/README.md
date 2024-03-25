@@ -34,6 +34,7 @@ Notes/Ideas:
 - Dagger
 - Selenium
 - Kustomize
+- k3sup
 - Terraform
     - Kubernetes
     - Artifactory
