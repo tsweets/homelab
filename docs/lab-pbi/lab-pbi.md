@@ -111,15 +111,15 @@ Public DHCP Range: 10.150.0.230-254
 #### Primordial & Infrastructure Service IP Information
 |Hostname|Function|IP|
 |-------|-------|-------|
-|ns1.skyline.lan|DNS Server 1| 10.150.0.2|
-|popos.skyline.lan|Admin Workstation| 10.150.0.10|
+|ns1.pbi.skyline.lan|DNS Server 1| 10.150.0.2|
+|popos.pbi.skyline.lan|Admin Workstation| 10.150.0.10|
 |proxy.skyline.lan|NGINX Proxy Manager| 10.150.0.50|
 |XXXX.skyline.lan|LDAP (GLAuth)| 10.150.0.51|
 |XXXX.skyline.lan|ROOT CA| 10.150.0.XX|
 |XXXX.skyline.lan|K3S Node 1| 10.150.0.XX|
 |XXXX.skyline.lan|K3S Node 2| 10.150.0.XX|
 |XXXX.skyline.lan|K3S Node 3| 10.150.0.XX|
-|XXXX.skyline.lan|Docker Host| 10.150.0.XX|
+|docker.pbi.skyline.lan|Docker Host| 10.150.0.80|
 |XXXX.skyline.lan|Rancher| 10.150.0.XX|
 |XXXX.skyline.lan|Dashboard| 10.150.0.XX|
 |XXXX.skyline.lan|APT Mirror| 10.150.0.XX|
