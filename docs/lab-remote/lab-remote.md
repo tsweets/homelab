@@ -3,17 +3,27 @@ Remote Test Lab
 
 Overview
 ----------------------------------------------------
-This lab is for remote access testing. It consists of an isolated network and acts as a co-location site within the same location as the main network.
+This lab is for remote access testing. It consists of an isolated network and acts as a co-location site within the same location as the main network. Its 1st use will be to demo a CI/CD Pipeline to my co-workers.
 
 
-Proof of Concept (nope straight to prod)
+Proof of Concept 
 ----------------------------------------------------
-Using an SBC (ZimaBoard with dual NICs), will install OpnSense. This will act as a gateway. On the LAN side, a Server will be directly connected.   
+Hardware:
+1. Unifi Cloud GW
+2. VM Server (Final should be fairly low powered)
+    - Will have the old prod srv available (Dell R210i)
+    - The 32GB Orange PI would be cool - limited to Docker
+3. Apache Guacamole Gateway on a PI
+    - https://www.youtube.com/watch?v=LWdxhZyHT_8 (MFA Setup)
+    - Wake On LAN to Physical High Powered Server
+    - Script to shutdown that server at night
+
 Features:  
 1. Wireguard VPN
-2. Proxmox Server
+2. Proxmox Server or Docker Server
 3. Remote Desktop (Virtual)
 4. Cloudflare Tunnel for Hosted Services
+5. Apache Guacamole for Remote Desktop Access
 
 
 ![Prod Network Overview](images/remote-lab.excalidraw.png)

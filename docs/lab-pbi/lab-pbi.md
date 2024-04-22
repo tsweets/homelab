@@ -155,3 +155,33 @@ Applications Provided
 #### CI/CD Server (Jenkins)
 
 The SDE provides [Jenkins](https://www.jenkins.io) as the CI/CD solution. It will consist of a single master node and two workers. Click for [SDE Jenkins](app-jenkins.md) details.
+
+Post Research Updates
+----------------------------------------------------
+Don't really need a cluster - Proxmox with the Backup server works great. This system will be simple. Single Workload Server and Single NAS
+
+#### Workload Server
+The current hot homelab server is the Minisforum MS-01
+- Core i9-13900H ($679)
+    - Proxmox VE
+    - 64GB RAM (Probably can do 96GB)
+    - 512GB Boot NVMe
+    - 2TB Data NVMe
+- NAS (Can use current QNAP TS-451)
+    - Rsync for File-level backups
+    - VM For Proxmox Backup Server
+    - Docker for Always on services
+    - Bummer this is not 10GB
+
+#### Things I need to run  
+- Git Server
+- Artifact Repo (Maven)
+- Container Registry (Docker/Helm)
+- Jenkins Master
+- Jenkins Node (at least 1 maybe 2)
+- GitOps Server
+- Test MySQL DB
+- Test MongoDB
+- Test Mock Server
+- Test FTP
+- Test K8S Cluster

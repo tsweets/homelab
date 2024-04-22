@@ -28,15 +28,14 @@ Upstairs:
 Network Diagram  
 ![High Level Network Diagram](docs/images/network-highlevel.excalidraw.png)
 ```
-Default                 10.222.1.0/24   VLAN: 1
-Management              10.33.1.0/24    VLAN: 33
-Skyline Classic         10.220.1.0/24   VLAN: 220
-Cloud                   10.107.0.0/24   VLAN: 107
-InternetOfThings        192.168.40.0/24 VLAN: 40
+Default                             10.222.1.0/24   VLAN: 1
+Management                          10.33.1.0/24    VLAN: 33
+Skyline Classic                     10.220.1.0/24   VLAN: 220
+V-Cluster (Cloud)                   10.106.0.0/24   VLAN: 106
+V-Cluster (PBI)                     10.107.0.0/24   VLAN: 107
+Test Lab                            10.150.0.0/24   VLAN: 150
+InternetOfThings                    192.168.40.0/24 VLAN: 40
 --------
-Need to Add
-PBI (v-cluster)         10.150.0.0/24   VLAN: 150
-PBI SAN (v-cluster SAN) 10.150.10.0/24  VLAN: 1150   
 ```
 
 #### PBI Lab Domain
