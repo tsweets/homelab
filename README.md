@@ -39,6 +39,8 @@ InternetOfThings                    192.168.40.0/24 VLAN: 40
 ```
 ### Environments/Domains/VLANs
 
+#### Physical Layer
+![Pysical Layer Diagram](docs/images/network-compute-layer.excalidraw.png)
 #### Default Environment
 -------
 Subnet: 10.222.1.0/24  
