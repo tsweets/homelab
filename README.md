@@ -29,6 +29,7 @@ Network Diagram
 ![High Level Network Diagram](docs/images/network-highlevel.excalidraw.png)
 ```
 Default                             10.222.1.0/24   VLAN: 1
+Core                                10.230.1.0/24   VLAN: 230
 Management                          10.33.1.0/24    VLAN: 33
 Skyline Classic                     10.220.1.0/24   VLAN: 220
 V-Cluster (Cloud)                   10.106.0.0/24   VLAN: 106
@@ -52,13 +53,19 @@ This subnet consist of newtworking equipment and makes up the "backbone" of the 
 
 #### Core Domain
 -------
-Subnet: x.x.x.x/24  
+Subnet: 10.230.0.0/24  
 DNS Domain: *.core.skyline-lab.com  
 Compute: 
 - 3 Node Proxmox HA Cluster (Low Power - Dell Micro)
-- NAS
+- NAS - All Flash UGreen (Need Stand in till end of June)
 
 Power: Always On
+
+Virtual Compute:
+- Docker Host (docker.core.skyline-lab.com)
+- DNS2 (dns2.core.skyline-lab.com)
+- Rancher (rancher.core.skyline-lab.com)
+- Proxmox Backup Server (pbs.core.skyline-lab.com)
 
 This subnet consist of services that are critical and shared for all environments. These are:
 - Internal DNS (Source of Truth)
@@ -134,3 +141,9 @@ DNS Domain: *.internal.wallyworld.lan
 Compute: None
 
 This subnet consist of User's client devices. For example my laptop
+
+### Backup Strategy
+--------------------------------------------
+Will use a NAS device to keep onsite backups. Most workloads will be running on Proxmox, there for VM Level backups will be performed via Proxmox Backup Server. I have a old QNAP NAS that cannot run VMs but can be a NFS server. Will use that plus a front end server to run Proxmx Backup Server. 
+
+For file level backups - will use Restic https://restic.net
