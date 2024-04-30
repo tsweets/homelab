@@ -29,11 +29,12 @@ Network Diagram
 ![High Level Network Diagram](docs/images/network-highlevel.excalidraw.png)
 ```
 Default                             10.222.1.0/24   VLAN: 1
-Core                                10.230.1.0/24   VLAN: 230
+Core                                10.230.0.0/24   VLAN: 230
 Management                          10.33.1.0/24    VLAN: 33
 Skyline Classic                     10.220.1.0/24   VLAN: 220
-V-Cluster (Cloud)                   10.106.0.0/24   VLAN: 106
-V-Cluster (PBI)                     10.107.0.0/24   VLAN: 107
+Remote (DMZ)                        10.106.0.0/24   VLAN: 106
+V-Cluster (Classic)                 10.107.0.0/24   VLAN: 107
+Production SDE                      10.108.0.0/24   VLAN: 108
 Test Lab                            10.150.0.0/24   VLAN: 150
 InternetOfThings                    192.168.40.0/24 VLAN: 40
 --------
@@ -50,6 +51,13 @@ Compute: 1 or 2 PIs for DNS
 
 This subnet consist of newtworking equipment and makes up the "backbone" of the network. Will also have 1 - 2 DNS Appliances (PIs)
 
+#### Default Environment
+-------
+Subnet: 10.222.1.0/24  
+DNS Domain: *.infra.ernal.wallyworld.lan  
+Compute: None
+
+This subnet consist of the backbone networking equipment
 
 #### Core Domain
 -------
@@ -84,12 +92,16 @@ Use 3 Dell Optiplex Micro 7050 (64GB, 1TB NVMe - 2TB Data). Single NIC. Ceph Clu
 
 
 
-#### PBI Lab Domain
+#### Production Software Development Env (SDE) Lab Domain
 -------
-Subnet: x.x.x.x/24  
-DNS Domain: *.prod.skyline-lab.com  
+Subnet: 10.108.0.0/24  
+DNS Domain: *.sde.skyline-lab.com  
 Compute: 
-- Single Proxmox Node (Minisforum MS-01 i9-13900H $679)
+- Single Proxmox Node 
+    - Minisforum MS-01 
+    - CPU: i9-13900H 14c/20t
+    - RAM: 64GB
+    - Boot/Data: 1TB NVMe
 - NAS
 
 Power: Always On  
@@ -98,7 +110,7 @@ This is production quality Software Development Environment. Described [PBI Lab]
 
 #### Test Lab Domain
 -------
-Subnet: x.x.x.x/24  
+Subnet: 10.150.0.0/24  
 DNS Domain: *.test.skyline-lab.com  
 Compute: 
 - 2 Proxmox Node Cluster
@@ -110,12 +122,10 @@ Power: On Demand (Wake on LAN)
 
 #### Remote/DMZ
 -------
-Subnet: x.x.x.x/24  
-DNS Domain: *.test.skyline-lab.com  
+Subnet: 10.106.0.0/24  
+DNS Domain: *.cloud.skyline-lab.com  
 Compute: 
-- 2 Proxmox Node Cluster
-    - Dell T7920
-    - Dell T7910
+- ZimaBoard
 - NAS
 
 #### IOT Environment
@@ -140,8 +150,7 @@ Subnet: 10.220.1.0/24
 DNS Domain: *.internal.wallyworld.lan  
 Compute: None
 
-This subnet consist of User's client devices. For example my laptop
-
+This subnet consist of User's client devices. For example my laptop and other various workstations
 ### Backup Strategy
 --------------------------------------------
 Will use a NAS device to keep onsite backups. Most workloads will be running on Proxmox, there for VM Level backups will be performed via Proxmox Backup Server. I have a old QNAP NAS that cannot run VMs but can be a NFS server. Will use that plus a front end server to run Proxmx Backup Server. 

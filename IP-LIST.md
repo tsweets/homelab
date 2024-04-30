@@ -11,3 +11,10 @@ Core Environment
 |Docker Host |docker.core.skyline-lab.com |10.230.0.100|
 |Rancher |rancher.core.skyline-lab.com |10.230.0.101|
 
+
+Production (SDE) Environment
+==========================================================
+|Host |Hostname |IP|
+|----------|----------|----------|
+|NAS |nas.sde.skyline-lab.com |10.108.0.10|
+|Promox 1 |pve1.sde.skyline-lab.com |10.108.0.21|
