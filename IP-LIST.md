@@ -18,3 +18,5 @@ Production (SDE) Environment
 |----------|----------|----------|
 |NAS |nas.sde.skyline-lab.com |10.108.0.10|
 |Promox 1 |pve1.sde.skyline-lab.com |10.108.0.21|
+|Jenkins Build 1 |build1.sde.skyline-lab.com |10.108.0.111|
+
