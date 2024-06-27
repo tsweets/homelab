@@ -28,9 +28,28 @@ Core will contain the source of truth DNS data however a dedicated Raspberry PI 
 
 LDAP User Auth
 ----------------------------------------------------
-Deployment: Docker Host
+Deployment: Docker Host 
 
 GLAuth https://glauth.github.io is a simple LDAP server that can run in a Docker container. 
+
+connection  
+ldap://docker.core.skyline-lab.com:389
+
+Search DB  
+dc=skyline,dc=lan
+
+Bind DN  
+cn=tsweets,dc=skyline,dc=lan
+
+LDAP Class  
+posixAccount
+
+testing
+```
+ ldapsearch -LLL -H ldap://docker.core.skyline-lab.com:389 -D cn=devops,dc=skyline,dc=lan -W  -x -bdc=skyline,dc=lan cn=devops
+```
+
+
 
 
 Outgoing Email
