@@ -25,4 +25,6 @@ Production (SDE) Environment
 |Jenkins Master|jenkins.sde.skyline-lab.com |10.108.0.110|
 |Jenkins Build 1 |build1.sde.skyline-lab.com |10.108.0.111|
 |MySQL 8 Skyline |mysql8-skyline.sde.skyline-lab.com|10.108.0.131|
+|GitLab |gitlab.sde.skyline-lab.com|10.108.0.132|
+
 
