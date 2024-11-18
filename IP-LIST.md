@@ -10,6 +10,8 @@ Core Environment
 |DNS |dns2.core.skyline-lab.com |10.230.0.53|
 |Docker Host |docker.core.skyline-lab.com |10.230.0.100|
 |Rancher |rancher.core.skyline-lab.com |10.230.0.101|
+|cloudflare |cloudflare.core.skyline-lab.com |10.230.0.102|
+
 
 
 Production (SDE) Environment
