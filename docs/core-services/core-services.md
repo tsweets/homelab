@@ -54,18 +54,14 @@ testing
 
 Outgoing Email
 ----------------------------------------------------
-Deployment: Docker Host
+Deployment: Docker Host (smtp-relay.skyline.lan old )
+smtp-relay.core.skyline-lab.com NEW 11/17/24
+email should be from - tony@skyline-lab.com (Domain is important)
+Server: msmtp https://marlam.de/msmtp/
+Docker Container: https://github.com/crazy-max/docker-msmtpd
 
-Currently have an outgoing email relay. It uses exim4-daemon-light  
-But take a look at msmtp https://marlam.de/msmtp/
-That runs on the PI 10.222.1.5
-AWS Help --> https://stackoverflow.com/questions/16756305/how-to-configure-msmtp-with-amazon-ses
 
-Docker Container https://github.com/crazy-max/docker-msmtpd
 
-Cheap Mail Service  https://purelymail.com  $10/yr
-Sendgrid $0 for 100 per day
-MailJet $0 for 200 per day
 
 Lab Homepage
 ----------------------------------------------------
