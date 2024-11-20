@@ -11,6 +11,7 @@ Core Environment
 |Docker Host |docker.core.skyline-lab.com |10.230.0.100|
 |Rancher |rancher.core.skyline-lab.com |10.230.0.101|
 |cloudflare |cloudflare.core.skyline-lab.com |10.230.0.102|
+|Traefik Core |traefik-dashboard-core.skyline-lab.com |10.230.0.110|
 
 
 
