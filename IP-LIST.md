@@ -23,6 +23,8 @@ Production (SDE) Environment
 |Proxmox Backup |pbs.sde.skyline-lab.com |10.230.0.50|
 |Proxmox Backup (Temp) | pve-backup.cloud.skyline.lan |10.107.0.26|
 |Proxmox 1 |pve1.sde.skyline-lab.com |10.108.0.21|
+|Proxmox OLE |pve-ole.sde.skyline-lab.com |10.108.0.30|
+|OLE K3S Cluster||10.108.0.40-59|
 |Jenkins Master|jenkins.sde.skyline-lab.com |10.108.0.110|
 |Jenkins Build 1 |build1.sde.skyline-lab.com |10.108.0.111|
 |MySQL 8 Skyline |mysql8-skyline.sde.skyline-lab.com|10.108.0.131|
