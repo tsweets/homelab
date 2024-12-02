@@ -20,7 +20,7 @@ Production (SDE) Environment
 |Host |Hostname |IP|
 |----------|----------|----------|
 |NAS |nas.sde.skyline-lab.com |10.108.0.10|
-|Proxmox Backup |pbs.sde.skyline-lab.com |10.230.0.50|
+|Proxmox Backup |pbs.sde.skyline-lab.com |10.108.0.50|
 |Proxmox Backup (Temp) | pve-backup.cloud.skyline.lan |10.107.0.26|
 |Proxmox 1 |pve1.sde.skyline-lab.com |10.108.0.21|
 |Proxmox OLE |pve-ole.sde.skyline-lab.com |10.108.0.30|
