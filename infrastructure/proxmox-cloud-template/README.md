@@ -4,17 +4,17 @@ Proxmox VM Setup
 
 Ubuntu Cloud Images
 --------------------------------------------
-These docs will be using 23.10 Mantic Minotaur
+These docs will be using 24.04 LTS Noble Numbat
 
-https://cloud-images.ubuntu.com/mantic/current/
+https://cloud-images.ubuntu.com/noble/current/
 
 Proxmox needs the QCOW2 .img file
-https://cloud-images.ubuntu.com/mantic/current/mantic-server-cloudimg-amd64.img
+https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img
 
 #### Create Template VM (Inside Cluster)
 - qm create 9000 --memory 2048 --core 2 --name ubuntu-cloud-23-10 --net0 virtio,bridge=vmbr0
 - cd /var/lib/vz/template/iso/  or /mnt/pve/cephfs/template/iso or /mnt/pve/ISO-SMB
-- qm importdisk 9000 mantic-server-cloudimg-amd64.img ceph-pool
+- qm importdisk 9000 mantic-server-cloudimg-amd64.img ceph-pool (or Fast-DATA)
 - qm set 9000 --scsihw virtio-scsi-pci --scsi0 YOUR STORAGE HERE:vm-9000-disk-0
 - qm set 9000 --ide2 YOUR STORAGE HERE:cloudinit
 - qm set 9000 --boot c --bootdisk scsi0

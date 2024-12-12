@@ -11,8 +11,8 @@ Physical
 
 |||
 |--------------------|--------------------|
-| Hostname: | pve-ole.sde.skyline-lab.com |
-|IP: | 10.108.0.30 |  
+| Hostname: | pve2.test.skyline-lab.com |
+|IP: | 10.107.0.22 |  
 |OS: | Proxmox VE |  
 |Hardware: | Dell Precision T7920 Workstation |  
 |CPU: | Dual Xeon Silver 4114 (10c/20t) Total 40threads |  
