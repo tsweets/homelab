@@ -32,5 +32,6 @@ Production (SDE) Environment
 |GitLab|gitlab.sde.skyline-lab.com|10.108.0.132|
 |Artifactory OSS|artifactory.sde.skyline-lab.com|10.108.0.133|
 |Artifactory JCR|jcr.sde.skyline-lab.com|10.108.0.134|
+|Keycloak|keycloak.sde.skyline-lab.com|10.108.0.140|
 
 
